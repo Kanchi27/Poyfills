@@ -33,3 +33,8 @@ customPromiseAll([showLogAfterDelay('Output after 2 seconds', 2000), Promise.res
 customPromiseAll([showLogAfterDelay('Output after 2 seconds', 2000), Promise.resolve('Resolve me'), Promise.reject('Reject me')])
     .then((val) => console.log('in resolve', val))
     .catch((val) => console.log('in reject', val));
+
+
+// Output :
+// in reject Reject me
+// in resolve [ 'Output after 2 seconds', 'Resolve me' ]
